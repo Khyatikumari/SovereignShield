@@ -2,22 +2,29 @@
 
 ### AI-Powered Phishing, Scam & Malicious Content Detection Platform
 
-SovereignShield is an AI-powered cybersecurity platform designed to analyze **messages and URLs** for potential phishing, scams, and malicious content. It combines multiple threat-detection signals into a unified **risk assessment score**, helping users identify suspicious digital content before interacting with it.
+SovereignShield is an AI-powered cybersecurity platform that analyzes **messages and URLs** to detect potential phishing, scams, and malicious content. It combines message analysis, URL threat detection, and a weighted risk-scoring engine to provide a unified threat assessment.
+
+## 🎥 Project Demo
+
+▶️ **Watch the SovereignShield Demo:**
+[**Loom — SovereignShield: Detecting Scams and Phishing Threats**](https://www.loom.com/share/8cfd850568a64266a1ed91bd9f728b09)
+
+> See SovereignShield in action, including its threat-analysis workflow and how it evaluates suspicious messages and URLs.
 
 ---
 
 ## 🚀 Overview
 
-Online scams increasingly use convincing messages, shortened URLs, fake websites, and social-engineering techniques to deceive users.
+Online scams increasingly use convincing messages, malicious links, fake websites, and social-engineering techniques to deceive users.
 
 **SovereignShield** provides a unified security layer that analyzes:
 
 * 💬 Suspicious messages
 * 🔗 URLs and website indicators
-* 🎯 Combined threat signals
-* 📊 Overall risk levels
+* 🎯 Multiple threat signals
+* 📊 Overall risk level
 
-The platform combines **message analysis and URL analysis** using a weighted risk-scoring engine to produce a consolidated threat assessment.
+The platform combines **message analysis and URL analysis** using a weighted risk-scoring engine to generate a consolidated threat assessment.
 
 ---
 
@@ -33,9 +40,7 @@ Evaluate messages for suspicious patterns commonly associated with phishing, sca
 
 ### ⚖️ Unified Risk Scoring
 
-SovereignShield combines multiple detection signals into a single threat score to provide a more comprehensive assessment.
-
-**Risk Score Fusion:**
+SovereignShield combines multiple detection signals into a single threat score.
 
 ```text
 Overall Threat Score
@@ -45,29 +50,13 @@ Overall Threat Score
         └── URL Analysis     → 55%
 ```
 
-This weighted approach helps combine independent signals rather than relying on a single detection method.
+### 🛡️ Multi-Signal Threat Assessment
 
-### 🛡️ Cybersecurity-Focused Architecture
-
-The project separates the application into a frontend and backend, making the system easier to maintain, extend, and integrate with additional security models.
+Instead of relying on a single indicator, SovereignShield combines different analysis signals to provide a more comprehensive security assessment.
 
 ---
 
 ## 🏗️ Project Architecture
-
-```text
-SovereignShield
-│
-├── frontend/
-│   └── Web-based user interface
-│
-├── backend/
-│   └── API and threat-analysis services
-│
-└── .gitignore
-```
-
-### High-Level Flow
 
 ```text
                  ┌──────────────────┐
@@ -109,9 +98,9 @@ SovereignShield
 ### Backend
 
 * Python
-* REST API architecture
-* Machine Learning-based threat analysis
-* URL and message analysis
+* REST API
+* Threat-analysis services
+* Machine Learning-based detection
 
 ### Frontend
 
@@ -119,10 +108,31 @@ SovereignShield
 * HTML
 * CSS
 
-### Development & Version Control
+### Development
 
 * Git
 * GitHub
+
+---
+
+## 🔌 API Endpoints
+
+| Endpoint           | Purpose                                  |
+| ------------------ | ---------------------------------------- |
+| `/app`             | Application/API entry point              |
+| `/scan`            | Scan security-related input              |
+| `/analyze-url`     | Analyze a URL for potential threats      |
+| `/analyze-message` | Analyze a message for suspicious content |
+
+---
+
+## 🔍 Threat Detection Workflow
+
+1. **Input Collection** — User provides a message or URL.
+2. **Security Analysis** — The backend analyzes the submitted input.
+3. **Signal Generation** — Individual threat signals are generated.
+4. **Risk Fusion** — Message and URL signals are combined using weighted scoring.
+5. **Threat Assessment** — A unified risk assessment is returned to the user.
 
 ---
 
@@ -132,11 +142,9 @@ SovereignShield
 SovereignShield/
 │
 ├── backend/
-│   ├── ...
 │   └── Backend services
 │
 ├── frontend/
-│   ├── ...
 │   └── Frontend application
 │
 ├── .gitignore
@@ -145,52 +153,14 @@ SovereignShield/
 
 ---
 
-## 🔌 API Endpoints
+## 🎯 Use Cases
 
-The backend exposes endpoints for different threat-analysis operations.
-
-| Endpoint           | Purpose                                  |
-| ------------------ | ---------------------------------------- |
-| `/app`             | Application/API entry point              |
-| `/scan`            | Scan security-related input              |
-| `/analyze-url`     | Analyze a URL for potential threats      |
-| `/analyze-message` | Analyze a message for suspicious content |
-
-> API availability and exact request/response formats may depend on the current backend deployment.
-
----
-
-## 🔍 Threat Detection Workflow
-
-1. **Input Collection**
-   The user provides a message or URL for analysis.
-
-2. **Security Analysis**
-   The backend evaluates the provided input using the relevant detection mechanisms.
-
-3. **Signal Generation**
-   Message and URL analysis produce individual threat signals.
-
-4. **Risk Fusion**
-   The signals are combined using the weighted scoring mechanism.
-
-5. **Threat Assessment**
-   SovereignShield returns a unified assessment to help the user understand the potential risk.
-
----
-
-## 🎯 Why SovereignShield?
-
-Traditional security tools may focus on a single indicator, such as a URL reputation or message content.
-
-SovereignShield takes a **multi-signal approach**, combining different sources of evidence to produce a more holistic threat assessment.
-
-This makes the platform suitable as a foundation for future cybersecurity capabilities such as:
+SovereignShield can serve as a foundation for:
 
 * Phishing detection
 * Scam detection
-* Social-engineering analysis
 * Malicious URL detection
+* Social-engineering analysis
 * Security awareness tools
 * AI-assisted threat analysis
 
@@ -198,22 +168,19 @@ This makes the platform suitable as a foundation for future cybersecurity capabi
 
 ## 🔮 Future Improvements
 
-Potential future enhancements include:
-
 * [ ] Browser extension for real-time URL checking
 * [ ] Email phishing detection
 * [ ] QR-code URL analysis
-* [ ] Screenshot/image-based scam detection
+* [ ] Screenshot-based scam detection
 * [ ] Explainable AI threat reports
-* [ ] Threat intelligence API integration
+* [ ] Threat-intelligence API integration
 * [ ] User authentication and scan history
 * [ ] Security analytics dashboard
-* [ ] Continuous model improvement
 * [ ] Real-time threat intelligence feeds
 
 ---
 
-## 🔐 Security Note
+## 🔐 Security Disclaimer
 
 SovereignShield is intended as a **security-assistance and threat-analysis tool**. Detection results should be treated as indicators rather than absolute guarantees that content is safe or malicious.
 
@@ -241,9 +208,7 @@ SovereignShield currently provides the foundation for unified **message and URL 
 
 ## ⭐ Contributing
 
-Contributions, suggestions, and improvements are welcome.
-
-If you find an issue or have an idea for improving SovereignShield, feel free to open an issue or submit a pull request.
+Contributions, suggestions, and improvements are welcome. Feel free to open an issue or submit a pull request.
 
 ---
 
